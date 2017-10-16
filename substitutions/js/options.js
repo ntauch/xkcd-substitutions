@@ -21,8 +21,8 @@ function saveOptions(e) {
   var originals = $('#replacements [name="origin"]');
   var replaces = $('#replacements [name="replace"]');
   for (var i = ((Math.max(originals.length, replaces.length)) - 1); i >= 0; i--) {
-    var org = originals[i].value.toLowerCase()
-    var rep = replaces[i].value.toLowerCase()
+    var org = originals[i].value
+    var rep = replaces[i].value
     if (org === "" && rep === "") {
       continue;
     }

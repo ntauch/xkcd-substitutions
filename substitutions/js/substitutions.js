@@ -2,20 +2,6 @@
 // Icon and idea are from www.xkcd.com/1288
 chrome.runtime.sendMessage("config", function(response) {
   "use strict";
-  // taken from http://stackoverflow.com/questions/17264639/replace-text-but-keep-case
-  function matchCase(text, pattern) {
-    var result = '';
-    for (var i = 0; i < text.length; i++) {
-      var c = text.charAt(i);
-      var p = pattern.charCodeAt(i);
-      if (p >= 65 && p < 65 + 26) {
-        result += c.toUpperCase();
-      } else {
-        result += c.toLowerCase();
-      }
-    }
-    return result;
-  }
   var substitute = (function() {
     "use strict";
     var replacements, ignore, i, replacementsObject, original;
@@ -41,9 +27,7 @@ chrome.runtime.sendMessage("config", function(response) {
         return;
       }
       for (i = replacementsObject.length - 1; i >= 0; i--) {
-        node.nodeValue = node.nodeValue.replace(replacementsObject[i][0], function(match) {
-          return matchCase(replacementsObject[i][1], match);
-        });
+        node.nodeValue = node.nodeValue.replace(replacementsObject[i][0], replacementsObject[i][1]);
       }
     };
   })();
