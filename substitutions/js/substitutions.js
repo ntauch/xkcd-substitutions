@@ -48,7 +48,7 @@ chrome.runtime.sendMessage("config", function(response) {
     };
   })();
 
-  var node, iter;
+  var node;
   var iter = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT);
   while ((node = iter.nextNode())) {
     substitute(node);
