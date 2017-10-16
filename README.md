@@ -3,6 +3,9 @@ xkcd-substitutions
 
 xkcd substitutions chrome extension
 
+Original version by Alec Posney
+https://github.com/Posnet
+
 All credit to XKCD.  
 https://xkcd.com/1288/
 https://xkcd.com/1625/
