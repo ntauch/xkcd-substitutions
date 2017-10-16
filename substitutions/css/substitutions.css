@@ -1,9 +1,9 @@
 
 @font-face {
 
-    font-family: "xkcd";
+    font-family: "Fira Sans";
 
-    src: url("../fonts/xkcd.otf") format("opentype");
+    src: url("../fonts/FiraSans-Regular.ttf") format("truetype");
 
 }
 
